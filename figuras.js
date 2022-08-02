@@ -62,16 +62,16 @@ function alturaIsoceles(){
     const baseInput = document.getElementById("InputBase");
     const baseValue = baseInput.value;
     const lado1Input = document.getElementById("InputLado1");
-    const lado1Value = baseInput.value;
+    const lado1Value = lado1Input.value;
     const lado2Input = document.getElementById("InputLado2");
-    const lado2Value = baseInput.value;
+    const lado2Value = lado2Input.value;
 
     const altura = calcularAlturaIsoceles(baseValue, lado1Value, lado2Value);
     alert(altura);
 }
 
 function calcularAlturaIsoceles(base, lado1, lado2){
-    if (lado1 == lado2){
+    if (lado1 == lado2 && lado1 != base){
         return Math.sqrt(lado1**2 - base**2 / 4);
     }
     else{
